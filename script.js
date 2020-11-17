@@ -42,3 +42,17 @@ onload = function () {
         temptext.innerHTML = "On stack "+stack.top()+"<br>"+temptext.innerHTML;
         text = textbox.value;
     };
+undo.onclick = function () {
+        let operation = stack.pop();
+        if(operation[0]!==-1){
+            temptext.innerHTML = "Performing undo operation<br>"+temptext.innerHTML;
+            if(operation[0] === 0){
+                let len = operation[1].length;
+                textbox.value = textbox.value.substring(0,textbox.value.length-len);
+            } else{
+                textbox.value += operation[1];
+            }
+            text = textbox.value;
+        }
+    };
+};
