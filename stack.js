@@ -17,3 +17,7 @@ clear(){
     isEmpty(){
         return  ( this.size === 0 );
     }
+     top(){
+        return this.stack[this.size-1];
+    }
+
