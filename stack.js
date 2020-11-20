@@ -10,3 +10,7 @@ class Stack{
         this.buffer = 4;
         this.stack = [];
     }
+clear(){
+        this.size = 0;
+        this.stack = [];
+    }
