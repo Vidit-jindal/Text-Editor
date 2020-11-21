@@ -20,4 +20,11 @@ clear(){
      top(){
         return this.stack[this.size-1];
     }
-
+    pop(){
+        if(!this.isEmpty()) {
+            this.size--;
+            return this.stack.pop();
+        } else{
+            return [-1,''];
+        }
+    }
