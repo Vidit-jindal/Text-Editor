@@ -28,3 +28,11 @@ clear(){
             return [-1,''];
         }
     }
+    push(type, char){
+        if(this.isEmpty()){
+            if(type===0)
+                this.stack.push([type, char]);
+        } else{
+            let tmp = this.top();
+            if(tmp[0]===type && tmp[1].length < this.buffer){
+                let top = this.pop();
