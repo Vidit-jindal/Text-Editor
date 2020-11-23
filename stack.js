@@ -36,3 +36,12 @@ clear(){
             let tmp = this.top();
             if(tmp[0]===type && tmp[1].length < this.buffer){
                 let top = this.pop();
+                top[1] = char + top[1];
+                this.stack.push(top);
+            } else{
+                this.stack.push([type, char]);
+            }
+        }
+        this.size++;
+    }
+}
