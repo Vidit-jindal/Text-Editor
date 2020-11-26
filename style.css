@@ -19,3 +19,7 @@ body {
     display: flex;
     margin: 0 auto;
 }
+#undo{
+    margin:auto;
+    display:block;
+}
